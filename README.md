@@ -26,7 +26,7 @@ Obsługiwane strony:
 - NanaSubs - **nanasubs.com**
 - Mioro-Subs - **miorosubs.pl**
 - Fumetsu - **fumetsu.pl**
-- Wbijam - **wbijam.pl**
+<!-- - Wbijam - **wbijam.pl** -->
 - Desu-Online - **desu-online.pl**
 - CDA - **cda.pl**
 - KatherineMay - **kathsubs.blogspot.com**
@@ -67,19 +67,7 @@ console.log(await scopeAnime({
     website: 'docchi'
   }))
   ```
-  Wbijam: 
-
-  *note: w anime trzeba podać subdomene*
-  ```js
-  import scopeAnime from "@docchi/scraping-anime-websites-poland";
-
-  console.log(await scopeAnime({
-    anime: "danmachi",
-    episode: 'czwarta_seria-10',
-    website: 'wbijam'
-  }))
-  ```
-
+  
   Desu-Online: 
 
   ```js

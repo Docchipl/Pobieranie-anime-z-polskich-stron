@@ -14,7 +14,7 @@ import {
   ServiceNanaSubs,
   ServiceOkamiSubs,
   ServiceReikoProject,
-  ServiceWbijam,
+  // ServiceWbijam,
 } from "./services/index.js";
 
 interface ResponseSource {
@@ -161,10 +161,10 @@ export default async function runScript({
     case "okami": {
       return await ServiceOkamiSubs(anime, episode);
     }
-    case "wbijam":
-    case "tmj": {
-      return await ServiceWbijam(anime, episode);
-    }
+    // case "wbijam":
+    // case "tmj": {
+    //   return await ServiceWbijam(anime, episode);
+    // }
     default:
       return {
         status: 404,

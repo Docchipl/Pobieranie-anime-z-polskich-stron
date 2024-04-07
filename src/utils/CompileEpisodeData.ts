@@ -19,7 +19,6 @@ interface ResponseSource {
   player_embed?: string;
   hosting?: string;
   player_id?: string;
-
 }
 
 export default function CompilePlayerData(player: string): ResponseSource {
@@ -80,6 +79,18 @@ export default function CompilePlayerData(player: string): ResponseSource {
           code: 200,
           player_embed: `https://video.sibnet.ru/shell.php?videoid=${playerID}`,
           hosting: "sibnet",
+          player_id: playerID,
+        };
+      }
+      case "mp4upload.com":
+      case "www.mp4upload.com": {
+        const splitPath = path.split("-");
+        const playerID = splitPath.pop();
+
+        return {
+          code: 200,
+          player_embed: `https://www.mp4upload.com/embed-${playerID}.html`,
+          hosting: "mp4upload",
           player_id: playerID,
         };
       }
